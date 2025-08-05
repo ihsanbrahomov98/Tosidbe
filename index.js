@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const connectDB = require("../config/db");
+const connectDB = require("./config/db");
 
 const app = express();
 const PORT = 5000;
@@ -13,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const playerRoutes = require("../routes/players");
+const playerRoutes = require("./routes/players");
 app.use("/players", playerRoutes);
 
 // Start server
