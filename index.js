@@ -12,6 +12,9 @@ connectDB();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("🎉 API is working!");
+});
 // Routes
 const playerRoutes = require("./routes/players");
 app.use("/players", playerRoutes);
